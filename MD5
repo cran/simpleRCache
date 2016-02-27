@@ -1,0 +1,10 @@
+f18ac7d864863a18465f4e8f89eb162b *DESCRIPTION
+27a5928e9ce46c9aba4fd0fff11a2441 *NAMESPACE
+3b3702043fae6766000acde6de43e9c3 *R/addMemoization.R
+4ac0b481688d628a2bac4a64c45ff303 *R/memoizedCall.R
+1a9a0a8e07d8b9d912b784df7c62d413 *R/setCacheRootPath.R
+2d15f5b442fadf1ad430093d8cbfda6c *man/addMemoization.Rd
+6a7e3a8534703ed12882970b522f7227 *man/memoizedCall.Rd
+175d9753ecde1bff4f33908f547b1f7b *man/setCacheRootPath.Rd
+6597d9c473a84d7ba715401528f89400 *tests/testthat/tests.R
+6893f1ee7f229bb3ed5c0e835f96324f *vignettes/usingSimpleRCache.Rmd
