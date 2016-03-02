@@ -4,16 +4,20 @@
 \alias{setCacheRootPath}
 \title{Set Cache Root Path}
 \usage{
-setCacheRootPath(path = "~/.simpleRCache")
+setCacheRootPath(path = tempdir())
 }
 \arguments{
-\item{path}{the cache root directory}
+\item{path}{the cache root directory (DEFAULT: a temporary directory, 
+but this can be change to a more permanent location)}
 }
 \description{
 Set Cache Root Path
 }
 \examples{
 setCacheRootPath()
+\dontrun{
+setCacheRootPath("~/.simpleRCache")
+}
 
 }
 
