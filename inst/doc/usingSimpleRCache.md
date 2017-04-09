@@ -1,22 +1,10 @@
----
-title: "Using simpleRCache"
-output:
-  html_document:
-    toc: yes
-vignette: >
-  %\VignetteIndexEntry{Using simpleRCache}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}    
----
+# Using simpleRCache
 
-```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
-require("knitr")
-opts_knit$set(root.dir="..")
-opts_chunk$set(fig.align="center", fig.width=6, fig.height=6, dpi=300)
-```
+
 
 ## Usage
-```{r example, message=FALSE, warning=FALSE}
+
+```r
 # Example function to cached
 fib <- function(n) {
  
@@ -53,18 +41,64 @@ fibCached <- addMemoization(fib)
 nums <- -25:25
  
 system.time(fibResults <- fib(nums))
-system.time(fibResults1 <- fibCached(nums))
+```
 
+```
+##    user  system elapsed 
+##   1.746   0.017   1.780
+```
+
+```r
+system.time(fibResults1 <- fibCached(nums))
+```
+
+```
+##    user  system elapsed 
+##   1.706   0.017   1.742
+```
+
+```r
 # Second run should be cached
 system.time(fibResults2 <- fibCached(nums))
+```
 
+```
+##    user  system elapsed 
+##       0       0       0
+```
+
+```r
 identical(fibResults, fibResults2)
+```
+
+```
+## [1] TRUE
+```
+
+```r
 identical(fibResults1, fibResults2)
+```
+
+```
+## [1] TRUE
+```
+
+# Debugging
+
+* To show debugging information
+```
+Sys.setenv("DEBUG_SIMPLERCACHE"="TRUE")
+```
+
+* To add a prefix to generated files
+```
+Sys.setenv("PREFIX_SIMPLERCACHE"="prefix")
 ```
 
 ## Session Info
 
-```{r, eval=FALSE}
+
+```r
 sessionInfo()
 ```
 

@@ -2,11 +2,12 @@
 title: "Using simpleRCache"
 output:
   html_document:
+    keep_md: yes
     toc: yes
 vignette: >
   %\VignetteIndexEntry{Using simpleRCache}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}    
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
@@ -60,6 +61,18 @@ system.time(fibResults2 <- fibCached(nums))
 
 identical(fibResults, fibResults2)
 identical(fibResults1, fibResults2)
+```
+
+# Debugging
+
+* To show debugging information
+```
+Sys.setenv("DEBUG_SIMPLERCACHE"="TRUE")
+```
+
+* To add a prefix to generated files
+```
+Sys.setenv("PREFIX_SIMPLERCACHE"="prefix")
 ```
 
 ## Session Info
