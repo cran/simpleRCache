@@ -1,9 +1,9 @@
-## ----setup, echo=FALSE, warning=FALSE, message=FALSE---------------------
+## ----setup, echo=FALSE, warning=FALSE, message=FALSE--------------------------
 require("knitr")
 opts_knit$set(root.dir="..")
 opts_chunk$set(fig.align="center", fig.width=6, fig.height=6, dpi=300)
 
-## ----example, message=FALSE, warning=FALSE-------------------------------
+## ----example, message=FALSE, warning=FALSE------------------------------------
 # Example function to cached
 fib <- function(n) {
  
@@ -48,6 +48,6 @@ system.time(fibResults2 <- fibCached(nums))
 identical(fibResults, fibResults2)
 identical(fibResults1, fibResults2)
 
-## ---- eval=FALSE---------------------------------------------------------
+## ---- eval=FALSE--------------------------------------------------------------
 #  sessionInfo()
 

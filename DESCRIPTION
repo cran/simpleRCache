@@ -4,17 +4,17 @@ Description: Simple result caching in R based on R.cache. The global environment
     considered when caching results simplifying moving files between multiple instances 
     of R. Relies on more base functions than R.cache (e.g. cached results are saved using 
     saveRDS() and readRDS()).
-Version: 0.3.2
-Date: 2017-04-09
+Version: 0.3.3
+Date: 2021-07-15
 Author: Augustin Luna, Vinodh Rajapakse
 Maintainer: Augustin Luna <lunaa@cbio.mskcc.org>
 Depends: R (>= 3.1.1)
 License: LGPL
 Imports: digest
-Suggests: knitr
+Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
-RoxygenNote: 6.0.1
+RoxygenNote: 7.0.2
 NeedsCompilation: no
-Packaged: 2017-04-09 15:29:45 UTC; user
+Packaged: 2021-07-15 19:04:08 UTC; user
 Repository: CRAN
-Date/Publication: 2017-04-09 15:50:03 UTC
+Date/Publication: 2021-07-15 19:30:02 UTC
